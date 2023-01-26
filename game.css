@@ -1,0 +1,91 @@
+body {
+  margin: 0px;
+  font-family: "Press Start 2P", sans-serif;
+}
+.btn {
+  font-family: "Press Start 2P", sans-serif;
+}
+.container {
+  background-color: rgb(95, 179, 71);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.inner-container {
+  max-width: 1000px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+.header {
+  margin: 10px;
+}
+.repeat-btn {
+  display: inline;
+  padding: 10px 50px;
+  font-size: 16px;
+  background-color: #eeeeee;
+  border: none;
+}
+.between {
+  display: inline-block;
+  float: right;
+  color: white;
+  font-size: 16px;
+  margin-top: 0px;
+}
+.main {
+  position: absolute;
+  right: 230px;
+  top: 8%;
+  text-align: center;
+  display: block;
+  color: white;
+  box-sizing: border-box;
+}
+.guess {
+  color: black;
+  font-size: 60px;
+  background: #eeeeee;
+  height: 30px;
+  width: 200px;
+  padding: 30px;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.check-num {
+  position: absolute;
+  top: 42%;
+  left: 90px;
+}
+h2.check {
+  border: 5px solid;
+  border-color: white;
+  font-size: 50px;
+  padding: 20px 80px;
+  color: white;
+}
+button.check-btn.btn {
+  padding: 20px 30px;
+  font-size: 16px;
+  background-color: #eeeeee;
+  margin-left: 30px;
+  border-color: black;
+  border-radius: 5px;
+}
+.game-result {
+  position: absolute;
+  top: 42%;
+  right: 0;
+  padding: 20px;
+}
+.result,
+.score,
+.high-score {
+  color: white;
+  font-size: 22px;
+}
+.result {
+  margin-bottom: 70px;
+}
