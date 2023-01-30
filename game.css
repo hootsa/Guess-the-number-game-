@@ -2,9 +2,11 @@ body {
   margin: 0px;
   font-family: "Press Start 2P", sans-serif;
 }
-.btn {
+
+.btn-font {
   font-family: "Press Start 2P", sans-serif;
 }
+
 .container {
   background-color: rgb(95, 179, 71);
   width: 100vw;
@@ -13,35 +15,39 @@ body {
 }
 .inner-container {
   max-width: 1000px;
-  height: 100%;
   margin: auto;
-  position: relative;
 }
 .header {
   margin: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 .repeat-btn {
-  display: inline;
-  padding: 10px 50px;
+  padding: 20px 30px;
   font-size: 16px;
   background-color: #eeeeee;
   border: none;
+  cursor: pointer;
+}
+.repeat-btn:hover,
+button.check-btn.btn-font:hover {
+  background-color: rgb(95, 93, 93);
+  transition: all 1s;
+}
+.check-btn:hover {
+  background-color: rgb(81, 79, 79);
+  transition: all 1s;
 }
 .between {
-  display: inline-block;
-  float: right;
   color: white;
   font-size: 16px;
   margin-top: 0px;
 }
 .main {
-  position: absolute;
-  right: 230px;
-  top: 8%;
   text-align: center;
   display: block;
   color: white;
-  box-sizing: border-box;
+  padding-top: 30px;
 }
 .guess {
   color: black;
@@ -54,11 +60,18 @@ body {
   padding-bottom: 50px;
 }
 
-.check-num {
-  position: absolute;
-  top: 42%;
-  left: 90px;
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
 }
+
+.bottom-wrapper {
+  border-top: 10px solid #eeeeee;
+  margin-top: -56px;
+  padding-top: 96px;
+}
+
 h2.check {
   border: 5px solid;
   border-color: white;
@@ -66,18 +79,19 @@ h2.check {
   padding: 20px 80px;
   color: white;
 }
-button.check-btn.btn {
+button.check-btn.btn-font {
   padding: 20px 30px;
   font-size: 16px;
   background-color: #eeeeee;
   margin-left: 30px;
   border-color: black;
   border-radius: 5px;
+  outline: solid;
+  outline-color: white;
+  cursor: pointer;
 }
+
 .game-result {
-  position: absolute;
-  top: 42%;
-  right: 0;
   padding: 20px;
 }
 .result,
