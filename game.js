@@ -3,26 +3,22 @@ function getRandomInt(min, max) {
 }
 
 let value = getRandomInt(0, 20);
-
-const checkInputElement = document.getElementById("numberSearch");
-const inputValue = checkInputElement.value;
-const converNum = Number(inputValue);
-
+console.log(value);
 const guessResultElement = document.getElementById("guessResult");
 const resultStatmentElement = document.getElementById("resultStatment");
 
 function checkInputNum() {
+  const checkInputElement = document.getElementById("numberSearch");
+  const inputValue = checkInputElement.value;
+  const converNum = Number(inputValue);
+
   guessResultElement.innerHTML = value;
-  if (value === inputValue) {
+  if (value === converNum) {
     resultStatmentElement.innerHTML = " 🎉 Correct Number!";
   } else {
     resultStatmentElement.innerHTML = " ❌ Wrong Number!";
   }
-  return resultStatmentElement;
 }
 
 const checkBtnElement = document.getElementById("checkBtn");
-checkBtnElement.addEventListener("click", () => {
-  const newValue = checkInputNum();
-  return newValue;
-});
+checkBtnElement.addEventListener("click", checkInputNum);
