@@ -2,55 +2,59 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-let value = getRandomInt(1, 20);
-console.log(value);
+// Get HTML Elements
 const guessResultElement = document.getElementById("guessResult");
 const resultStatmentElement = document.getElementById("resultStatment");
 const checkInputElement = document.getElementById("numberSearch");
 const scoreElement = document.getElementById("score");
 
-let maxScore = 20;
-scoreElement.innerHTML = "💯 score:" + maxScore;
-function checkInputNum() {
-  let minScore = 0;
+// default page load
+let value = getRandomInt(1, 20);
+let remainingScore = 20;
+scoreElement.innerHTML = "💯 score:" + remainingScore;
+console.log(value);
 
+function checkInputNum() {
   const inputValue = checkInputElement.value;
-  if (inputValue === "") {
+  if (inputValue === "" || remainingScore === 0) {
     return;
   }
+
   const convertNum = Number(inputValue);
 
-  if (convertNum > value && maxScore !== minScore) {
+  if (convertNum > value) {
     resultStatmentElement.innerHTML = "Your Number is too BIG!";
-    maxScore -= 1;
-    scoreElement.innerHTML = "💯 score:" + maxScore;
-  } else if (convertNum < value && maxScore !== minScore) {
+    remainingScore -= 1;
+    scoreElement.innerHTML = "💯 score:" + remainingScore;
+  } else if (convertNum < value) {
     resultStatmentElement.innerHTML = " Your Number is too SMALL!";
-    maxScore -= 1;
-    scoreElement.innerHTML = "💯 score:" + maxScore;
+    remainingScore -= 1;
+    scoreElement.innerHTML = "💯 score:" + remainingScore;
   } else {
     resultStatmentElement.innerHTML = " 🎉 Correct Number!";
-    scoreElement.innerHTML = "💯 score:" + maxScore;
+    scoreElement.innerHTML = "💯 score:" + remainingScore;
     guessResultElement.innerHTML = value;
   }
-  if (maxScore === minScore) {
-    scoreElement.innerHTML = "💯 score:" + minScore;
+
+  if (remainingScore === 0) {
+    resultStatmentElement.innerHTML = "GAME OVER!!!";
+    checkBtnElement.disabled = true;
   }
 
   checkInputElement.innerHTML = "";
 }
 
-const checkBtnElement = document.getElementById("checkBtn");
-checkBtnElement.addEventListener("click", checkInputNum);
-
-const againBtnElement = document.getElementById("againButton");
-againBtnElement.addEventListener("click", againBtnWork);
-
 function againBtnWork() {
-  checkInputElement.disabled = false;
   value = getRandomInt(1, 20);
   console.log(value);
   guessResultElement.innerHTML = "?";
   resultStatmentElement.innerHTML = "";
   checkInputElement.value = "";
 }
+
+// Event Listeners
+const checkBtnElement = document.getElementById("checkBtn");
+checkBtnElement.addEventListener("click", checkInputNum);
+
+const againBtnElement = document.getElementById("againButton");
+againBtnElement.addEventListener("click", againBtnWork);
