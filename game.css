@@ -111,7 +111,7 @@ button.check-btn.btn-font {
 .result {
   margin-bottom: 70px;
 }
-.checkBtn:disabled {
-  opacity: 0.5;
+button#checkBtn:disabled {
   cursor: not-allowed;
+  opacity: 0.6;
 }
