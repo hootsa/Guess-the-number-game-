@@ -16,4 +16,4 @@ guess was not correct. you can re-start the game by hit the "Again!"
 button. <br />The last but not least is the Highscore that show you
 the Highest score of all time that you played!
 
-To play the Game [please click hear]https://htmlpreview.github.io/?https://github.com/hootsa/Guess-the-number-game-/blob/main/index.html
+To play the Game [please click here...](https://htmlpreview.github.io/?https://github.com/hootsa/Guess-the-number-game-/blob/main/index.html)
