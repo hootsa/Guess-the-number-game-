@@ -20,6 +20,7 @@ body {
 .header {
   margin: 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .repeat-btn {
@@ -59,9 +60,12 @@ button.check-btn.btn-font:hover {
   margin: auto;
   padding-bottom: 50px;
 }
-
+.guess-title {
+  line-height: 50px;
+}
 .bottom-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0px 50px;
 }
@@ -101,12 +105,13 @@ button.check-btn.btn-font {
 
 .game-result {
   padding: 20px;
+  width: 507px;
 }
 .result,
 .score,
 .high-score {
   color: white;
-  font-size: 22px;
+  font-size: 18px;
 }
 .result {
   margin-bottom: 70px;
@@ -114,4 +119,40 @@ button.check-btn.btn-font {
 button#checkBtn:disabled {
   cursor: not-allowed;
   opacity: 0.6;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 10px solid #4a8a39;
+  padding: 29px;
+  width: 66%;
+  border-radius: 6px;
+  position: absolute;
+  top: 123px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.play-game {
+  font-size: 19px;
+  padding: 19px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border-color: black;
+  background-color: green;
+  font-family: "Press Start 2P";
+}
+.play-game:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+p.game-instruction {
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+}
+.title {
+  display: inline-block;
 }

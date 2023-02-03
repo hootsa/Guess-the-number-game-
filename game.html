@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game</title>
+    <title>Guess the number game!</title>
     <link rel="stylesheet" href="game.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Press+Start+2P"
     />
+    <script src="./game.js"></script>
   </head>
   <body>
     <div class="container">
@@ -19,7 +20,7 @@
           <h3 class="between">(Between 1 and 20)</h3>
         </header>
         <div class="main">
-          <h1>Guess My Number!</h1>
+          <h1 class="guess-title">Guess My Number!</h1>
           <h2 class="guess" id="guessResult">?</h2>
         </div>
       </div>
@@ -31,12 +32,26 @@
           </div>
           <div class="game-result">
             <h3 class="result" id="resultStatment"></h3>
-            <h3 class="score" id="score">💯 Score:</h3>
-            <h3 class="high-score" id="highScore">🥇 Highscore:</h3>
+            <h3 class="score" id="score"></h3>
+            <h3 class="high-score" id="highScore"></h3>
           </div>
         </div>
       </div>
+
+      <div class="modal-content" id="modal">
+        <title class="title">Game instruction</title>
+        <p class="game-instruction">
+          There are numbers between 1 to 20 and your mission is guess the
+          correct Number. If you were so lucky you may guess it by first try but
+          if not there is a hint for you to guess the correct number. Also you
+          have 20 scores in each round and it will decreased by 1 point if your
+          guess was not correct. you can re-start the game by hit the "Again!"
+          button. <br />The last but not least is the Highscore that show you
+          the Highest score of all time that you played! Hope you enjoyed it
+          and...
+        </p>
+        <button class="play-game" id="letsPlayBtn">Let's play</button>
+      </div>
     </div>
   </body>
-  <script src="./game.js"></script>
 </html>
